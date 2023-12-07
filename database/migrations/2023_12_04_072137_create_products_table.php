@@ -16,6 +16,7 @@ return new class extends Migration {
       $table->string("name")->nullable(false);
       $table->string("deskripsi")->nullable(false);
       $table->string("image");
+      $table->bigInteger("price");
       $table->timestamps();
     });
   }

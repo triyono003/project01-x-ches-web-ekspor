@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>add admin</title>
+    <title>list admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -15,21 +15,21 @@
             outline: none !important;;
             box-shadow: none;
         }
-        h4 {
+        h6 {
             margin-top: 10%;
             text-align: center;
-            color: #20AD00;
+            color: #FFA600;
             text-shadow: 0.3px 0.3px 0.3px #0C0C0C;
         }
     </style>
     <div class="container" style="width: 100%;">
         <div class="col-12 col-xl-8 mb-lg-0 mx-auto" style="margin-top: 15%;">
-            <i class="fa-solid fa-store fa-4x" style="width: 100%;"></i>
+            <i class="fa-solid fa-user fa-bounce fa-4x" style="width: 100%;"></i>
             <br>
-            <h4>daftar product yang dipasarkan</h4>
+            <h6>Privasikan data anda dari siapapun</h6>
             <div class="card" style="margin-top: 5%">
                 <div class="card-header" style="display: flex;">
-                    <h5 class="col-5">Product anda</h5>
+                    <h5 class="col-5">Admin list</h5>
                     <div class="col-md-5">
                         <div class="input-group col-7">
                             <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="search" id="example-search-input">
@@ -46,120 +46,43 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Logo</th>
-                                    <th scope="col">Judul</th>
-                                    <th scope="col">Deskripsi</th>
-                                    <th scope="col">Kualitas</th>
-                                    <th scope="col">Harga</th>
+                                    <th scope="col">id</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Password</th>
                                     <th scope="col">Edit</th>
                                     <th scope="col">Hapus</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada </td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+<tbody>
+  @foreach($user as $users)
+  <tr>
+  <td>{{$users->id}}</td>
+<td><img src="{{asset('storage/'.$users->image)}}" style="border-radius: 50%;" width="50"></td>
+  <td>{{$users->username}}</td>
+  <td>{{$users->email}}</td>
+
+<td>
+<button type="button" class="btn btn-warning btn-xs dt-edit">
+<i class="fa-solid fa-pen-to-square fa-1x"></i>
+</button>
+</td>
+<td>
+  <form action="/src/admin/list_admin/{{$users->id}}"method="post">
+    @method("delete")
+    @csrf
+  <button type="submit" class="btn btn-danger btn-xs dt-delete">
+  <i class="fa-solid fa-trash-can fa-1x">  </i>
+  </button>
+  </form>
+</td>
+                                    
+</tr>
+@endforeach
+
+</tbody>
+  </table>
                         <div id="myModal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">

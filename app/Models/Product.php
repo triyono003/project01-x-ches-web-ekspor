@@ -10,7 +10,7 @@ use App\Models\Quality;
 class Product extends Model
 {
   use HasFactory;
-  protected $fillable = ["name", "quality_id", "deskripsi", "image"];
+  protected $fillable = ["name", "quality_id", "deskripsi", "image","price"];
 
   public function quality(): belongsTo
   {

@@ -56,108 +56,33 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada </td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">disini logo bre</th>
-                                    <td>Lada Hitam</td>
-                                    <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                    <td>Premium</td>
-                                    <td>RP90.000</td>
-                                    <td sty>
-                                        <button type="button" class="btn btn-warning btn-xs dt-edit">
-                                            <i class="fa-solid fa-pen-to-square fa-1x"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs dt-delete">
-                                            <i class="fa-solid fa-trash-can fa-1x"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+@foreach($productList as $product)
+  <tr>
+  <th scope="row">
+    <img src="{{asset('storage/'. $product->image)}}" alt="gambar nya mana bre"width="100">
+  </th>
+
+    <td>{{$product->name}}</td>
+    <td>{{$product->deskripsi}}</td>
+    <td>{{$product->quality->name}}</td>
+    <td>{{number_format($product->price,0,',','.')}}</td>
+
+<td sty>
+<button type="button" class="btn btn-warning btn-xs dt-edit">
+  <i class="fa-solid fa-pen-to-square fa-1x"></i>
+  </button>
+  </td>
+  <td>
+    <form action="/src/admin/list_product/{{$product->id}}"method="post">
+    @method("delete")
+    @csrf
+  <button type="submit" class="btn btn-danger btn-xs dt-delete">
+  <i class="fa-solid fa-trash-can fa-1x">  </i>
+  </button>
+  </form>
+    </td>
+    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <div id="myModal" class="modal fade" role="dialog">

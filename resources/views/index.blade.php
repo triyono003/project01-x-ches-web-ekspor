@@ -294,85 +294,18 @@
                     </div>
                     <h6>{{$alldata->deskripsi}}</h6>
                     <div class="d-flex justify-content-between install mt-3">
-                        <span>Harga Rp87.540/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20putih%20premium%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a>
+                        <span>Harga {{number_format($alldata->price,0,',','.')}}/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20putih%20premium%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a>
                     </div>
                 </div>
             </div>
             @endforeach
-{{--              --}}
-{{--             <div class="col-md-4"> --}}
-{{--                 <div class="card p-3"> --}}
-{{--                     <div class="d-flex flex-row mb-3"> --}}
-{{--                         <img src="assets/ladahp.jpg" style="border-radius: 50%;" width="70"> --}}
-{{--                         <div class="d-flex flex-column ml-2"> --}}
-{{--                             <span>Lada Hitam</span><span class="text-black-50">Premium</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> --}}
-{{--                         </div> --}}
-{{--                     </div> --}}
-{{--                     <h6>Dengan butiran yang pekat dan rasa yang mendalam.</h6> --}}
-{{--                     <div class="d-flex justify-content-between install mt-3"> --}}
-{{--                         <span>Harga Rp90.000/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20hitam%20premium%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a> --}}
-{{--                     </div> --}}
-{{--                 </div> --}}
-{{--             </div> --}}
-{{--             <div class="col-md-4"> --}}
-{{--                 <div class="card p-3"> --}}
-{{--                     <div class="d-flex flex-row mb-3"> --}}
-{{--                         <img src="assets/ladam.jpg" style="border-radius: 50%;" width="70"> --}}
-{{--                         <div class="d-flex flex-column ml-2"> --}}
-{{--                             <span>Lada Merah</span><span class="text-black-50">Sertifikasi</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> --}}
-{{--                         </div> --}}
-{{--                     </div> --}}
-{{--                     <h6>Salah satu rempah-rempah yang sering digunakan didapur.</h6> --}}
-{{--                     <div class="d-flex justify-content-between install mt-3"> --}}
-{{--                         <span>Harga Rp49.701/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20merah%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a> --}}
-{{--                     </div> --}}
-{{--                 </div> --}}
-{{--             </div> --}}
-{{--             <div class="col-md-4"> --}}
-{{--                 <div class="card p-3"> --}}
-{{--                     <div class="d-flex flex-row mb-3"> --}}
-{{--                         <img src="assets/ladap.jpg" width="70"> --}}
-{{--                         <div class="d-flex flex-column ml-2"> --}}
-{{--                             <span>Lada Putih</span><span class="text-black-50">Sertifikasi</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> --}}
-{{--                         </div> --}}
-{{--                     </div> --}}
-{{--                     <h6>Berikan kesan yang khas dari lada putih yang harum..</h6> --}}
-{{--                     <div class="d-flex justify-content-between install mt-3"> --}}
-{{--                         <span>Harga Rp69.520/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20putih%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a> --}}
-{{--                     </div> --}}
-{{--                 </div> --}}
-{{--             </div> --}}
-{{--             <div class="col-md-4"> --}}
-{{--                 <div class="card p-3"> --}}
-{{--                     <div class="d-flex flex-row mb-3"> --}}
-{{--                         <img src="assets/ladah.jpg" style="border-radius: 50%;" width="70"> --}}
-{{--                         <div class="d-flex flex-column ml-2"> --}}
-{{--                             <span>Lada hitam</span><span class="text-black-50">Sertifikasi</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> --}}
-{{--                         </div> --}}
-{{--                     </div> --}}
-{{--                     <h6>Kepekatan yang indah menyatu dengan cita rasa yang khas.</h6> --}}
-{{--                     <div class="d-flex justify-content-between install mt-3"> --}}
-{{--                         <span>Harga Rp79.000/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20hitam%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a> --}}
-{{--                     </div> --}}
-{{--                 </div> --}}
-{{--             </div> --}}
-{{--             <div class="col-md-4"> --}}
-{{--                 <div class="card p-3"> --}}
-{{--                     <div class="d-flex flex-row mb-3"> --}}
-{{--                         <img src="assets/ladag.jpg" width="70"> --}}
-{{--                         <div class="d-flex flex-column ml-2"> --}}
-{{--                             <span>Lada Hijau</span><span class="text-black-50">Standart</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> --}}
-{{--                         </div> --}}
-{{--                     </div> --}}
-{{--                     <h6>Rempah yang memberikan aroma yang wangi terhadap hidangan.</h6> --}}
-{{--                     <div class="d-flex justify-content-between install mt-3"> --}}
-{{--                         <span>Harga Rp52.300/kg</span><a href="https://wa.me/6287893446255?text=Saya%20tertarik%20dengan%20product%20lada%20hijau%20yang%20anda%20tawarkan" style="text-decoration: none;"><span class="text-primary">Tersedia&nbsp;<i class="fa fa-angle-right"></i></span></a> --}}
-{{--                     </div> --}}
-{{--                 </div> --}}
-{{--             </div> --}}
-{{--         </div> --}}
-{{--     </div> --}}
+
 {{--     <!--card stop--> --}}
+
+
+
+
+
     <!--footer strat-->
     <footer class="footer_area section_padding_130_0">
         <div class="container">
@@ -393,7 +326,7 @@
                         </div>
                         <!-- Footer Social Area-->
                         <div class="footer_social_area">
-                            <a href="https://www.facebook.com/tsts.hajiku" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype"><i class="fa fa-skype"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/tsts.hajiku" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-instagram" style="color: #FF2200;"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github"><i class="fa fa-github" style="color: #080808;"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>

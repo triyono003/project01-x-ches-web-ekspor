@@ -365,16 +365,16 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-white border-bottom border-muted" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active text-white border-bottom border-muted" aria-current="page" href="../">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white border-bottom border-muted" href="/src/blog">Blog</a>
+                            <a class="nav-link text-white border-bottom border-muted" href="blog/index.php">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white border-bottom border-muted" href="/src/product">Product</a>
+                            <a class="nav-link text-white border-bottom border-muted" href="product/index.php">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white border-bottom border-muted" href="/src/contact">Contact</a>
+                            <a class="nav-link text-white border-bottom border-muted" href="contact/index.php">Contact</a>
                         </li>
                     </ul>
                     <form class="d-flex mt-3" role="search">
@@ -395,15 +395,9 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="contact">
-                        <form class="form" name="" method="post" action="/src/contact" onsubmit="return validation();">
+                        <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                  @csrf
-@if(session()->has('success'))
-<div class="alert alert-success">
-{{ session()->get('success') }}
-</div>
-@endif
                                     <input type="text" name="name" class="form-control" placeholder="Nama" required="required">
                                 </div>
                                 <div class="form-group col-md-6">
@@ -480,7 +474,7 @@
                         </div>
                         <!-- Footer Social Area-->
                         <div class="footer_social_area">
-                            <a href="https://www.facebook.com/tsts.hajiku" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype"><i class="fa fa-skype"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/tsts.hajiku" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-instagram" style="color: #FF2200;"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github"><i class="fa fa-github" style="color: #080808;"></i></a><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>

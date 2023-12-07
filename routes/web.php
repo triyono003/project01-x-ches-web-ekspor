@@ -16,22 +16,50 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SendEmailController;
 use App\Http\Middleware\Authenticate;
+//use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\RegisterController;
 
 Route::get("/", [HomeController::class, "index"]);
-Route::get("/src/product", [ProductController::class, "create"]);
 Route::get("/src/blog", [BlogController::class, "create"]);
 Route::get("/src/contact", [ContactController::class, "create"]);
 Route::post("/src/contact", [ContactController::class, "saveMessage"]);
 
-Route::get("/src/auth/login", [LoginController::class, "create"])->name(
-  "login"
+//////////////////////////////////////////////
+Route::middleware("guest")->group(function () {
+  Route::get("/src/auth/register", [RegisterController::class, "create"]);
+  Route::post("/src/auth/register", [RegisterController::class, "store"])->name(
+    "register"
+  );
+  Route::get("/src/auth/login", [LoginController::class, "create"])->name(
+    "login"
+  );
+  Route::post("/src/auth/login", [LoginController::class, "store"]);
+});
+
+//////////////////////////////////////////////
+Route::get("/src/auth/logout", [LoginController::class, "logout"])->name(
+  "logout"
 );
-Route::get("/src/auth/logout", [LoginController::class, "logout"]);
-Route::post("/src/auth/login", [LoginController::class, "store"]);
 
 Route::middleware("auth")->group(function () {
+  Route::get("/src/admin/list_admin", [AdminController::class, "listAdmin"]);
+  Route::delete("/src/admin/list_admin/{id}", [AdminController::class, "destroy"]);
+
   Route::get("/src/admin/dashboard", [AdminController::class, "create"]);
-  Route::post("/src/admin/dashboard", [AdminController::class, "store"]);
+
+  Route::get("/src/admin/list_product", [
+    ProductController::class,
+    "listProduct",
+  ]);
+
+  Route::get("/src/admin/upload_product", [
+    ProductController::class,
+    "pageUploadProduct",
+  ]);
+  Route::post("/src/admin/upload_product", [
+    ProductController::class,
+    "store",
+  ])->name("product");
 });
 
 Route::get("/src/email/test_send_email", [SendEmailController::class, "index"]);

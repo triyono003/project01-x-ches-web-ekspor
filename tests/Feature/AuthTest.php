@@ -13,7 +13,8 @@ class AuthTest extends TestCase
   public function test_login_success(): void
   {
     $response = User::create([
-      "name" => "admin",
+      "image" => "admin.jpg",
+      "username" => "admin",
       "email" => "admin@log.com",
       "password" => bcrypt("admin123"),
     ]);

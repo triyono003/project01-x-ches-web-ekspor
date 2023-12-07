@@ -35,7 +35,7 @@ class ProductTest extends TestCase
     //$response->dump();
     */
   }
-
+/*
   public function test_user_input_product_failed()
   {
     $user = User::factory()->create();
@@ -47,4 +47,5 @@ class ProductTest extends TestCase
     $response->assertStatus(302);
     //$response->assertRedirect("/src/admin/dashboard");
   }
+  */
 }

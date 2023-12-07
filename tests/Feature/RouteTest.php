@@ -18,13 +18,13 @@ class RouteTest extends TestCase
     $response->assertStatus(200);
     //$response->dump();
   }
-
+/*
   public function test_ProductPage(): void
   {
     $response = $this->get("/src/product");
     $response->assertStatus(200);
   }
-
+*/
   public function test_BlogPage(): void
   {
     $response = $this->get("/src/blog");
