@@ -18,11 +18,14 @@ use App\Http\Controllers\SendEmailController;
 use App\Http\Middleware\Authenticate;
 //use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\MessageController;
 
 Route::get("/", [HomeController::class, "index"]);
 Route::get("/src/blog", [BlogController::class, "create"]);
 Route::get("/src/contact", [ContactController::class, "create"]);
 Route::post("/src/contact", [ContactController::class, "saveMessage"]);
+Route::get("/src/product", [ProductController::class, "create"]);
+Route::get("/src/product", [ProductController::class, "productHome"]);
 
 //////////////////////////////////////////////
 Route::middleware("guest")->group(function () {
@@ -43,13 +46,21 @@ Route::get("/src/auth/logout", [LoginController::class, "logout"])->name(
 
 Route::middleware("auth")->group(function () {
   Route::get("/src/admin/list_admin", [AdminController::class, "listAdmin"]);
-  Route::delete("/src/admin/list_admin/{id}", [AdminController::class, "destroy"]);
+  Route::delete("/src/admin/list_admin/{id}", [
+    AdminController::class,
+    "destroy",
+  ]);
 
   Route::get("/src/admin/dashboard", [AdminController::class, "create"]);
 
   Route::get("/src/admin/list_product", [
     ProductController::class,
     "listProduct",
+  ]);
+
+  Route::delete("/src/admin/list_product/{id}", [
+    ProductController::class,
+    "destroy",
   ]);
 
   Route::get("/src/admin/upload_product", [
@@ -64,6 +75,10 @@ Route::middleware("auth")->group(function () {
 
 Route::get("/src/email/test_send_email", [SendEmailController::class, "index"]);
 
+Route::get("/src/admin/messages", [MessageController::class, "create"])->name(
+  "message"
+);
+Route::delete("/src/admin/contact/{id}", [ContactController::class, "destroy"]);
 //////////////////////////////////////////////
 
 Route::get("/src/auth/forgot_password", function () {

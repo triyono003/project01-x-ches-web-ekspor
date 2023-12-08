@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Quality;
 use App\Models\Visitor;
+
 use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
@@ -17,6 +18,8 @@ class AdminController extends Controller
     return view("src.admin.dashboard", [
       "userAuth" => Auth::user(),
       "user" => User::all(),
+      //"productList" => Product::latest()->first(),
+      "productList" => Product::orderBy("id", "desc")->cursorPaginate(4),
       "adminCount" => User::count(),
       "visitorCount" => Visitor::count(),
     ]);

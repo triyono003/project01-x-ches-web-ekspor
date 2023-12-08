@@ -278,7 +278,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('message')}}">
                                 <i class="fa-solid fa-bell"></i>
                                 <span class="ml-2">Messages</span>
                             </a>
@@ -306,7 +306,7 @@
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Overview</li>
                     </ol>
                 </nav>
@@ -361,61 +361,35 @@
                                                 <th scope="col">Kualitas</th>
                                                 <th scope="col">Harga</th>
                                                 <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">disini logo bre</th>
-                                                <td>Lada Hitam</td>
-                                                <td>hitam pekat memberikan sensasi yang nikmat bersama lada</td>
-                                                <td>Premium</td>
-                                                <td>RP90.000</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">17370540</th>
-                                                <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                                <td>jacob.monroe@company.com</td>
-                                                <td>$153.11</td>
-                                                <td>Aug 28 2020</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">17371705</th>
-                                                <td>Volt Premium Bootstrap 5 Dashboard</td>
-                                                <td>johndoe@gmail.com</td>
-                                                <td>€61.11</td>
-                                                <td>Aug 31 2020</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">17370540</th>
-                                                <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                                <td>jacob.monroe@company.com</td>
-                                                <td>$153.11</td>
-                                                <td>Aug 28 2020</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">17371705</th>
-                                                <td>Volt Premium Bootstrap 5 Dashboard</td>
-                                                <td>johndoe@gmail.com</td>
-                                                <td>€61.11</td>
-                                                <td>Aug 31 2020</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">17370540</th>
-                                                <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                                <td>jacob.monroe@company.com</td>
-                                                <td>$153.11</td>
-                                                <td>Aug 28 2020</td>
-                                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <a href="#" class="btn btn-block btn-light">View all</a>
+</tr>
+</thead>
+  <tbody>
+ @forelse($productList as $product)   
+    <tr>
+      <th scope="row">
+        <img src="{{asset('storage/'. $product->image)}}" alt="lah gambarnya mana bre"width="80">
+      </th>
+<td>{{$product->name}}</td>
+<td>{{$product->deskripsi}}</td>
+<td>{{$product->quality->name}}</td>
+<td>RP {{number_format($product->price,0,',','.')}}</td>
+<td><a href="#" class="btn btn-sm btn-primary width:rem">View</a></td>
+@empty
+<td>
+<div class="card">
+  <div class="card-body">
+    Data Masih Kosong.
+  </div>
+</div>
+</td>
+  </tr>
+  @endforelse
+  </tbody>
+    </table>
+      
+
+<a href="/src/admin/list_product" class="btn btn-block btn-light">View all</a>
+
                             </div>
                         </div>
                     </div>

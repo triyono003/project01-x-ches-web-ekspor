@@ -48,6 +48,8 @@ class HomeController extends Controller
       "clientip" => $clientIP,
     ]);
 
-    return view("index", ["data" => Product::orderBy("id", "desc")->get()]);
+    return view("index", [
+      "data" => Product::orderBy("id", "desc")->limit(6)->get(),
+    ]);
   }
 }

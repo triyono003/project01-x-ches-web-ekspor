@@ -34,7 +34,7 @@
       {{session('success')}}
     </div>
   @endif
-            <form accept-charset="UTF-8" action="/src/admin/upload_product" method="POST" enctype="multipart/form-data" target="_blank">
+            <form accept-charset="UTF-8" action="" method="POST" enctype="multipart/form-data" target="_blank">
               @csrf
               
                 <div class="form-group">

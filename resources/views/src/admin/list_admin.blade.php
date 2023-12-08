@@ -62,6 +62,7 @@
 <td><img src="{{asset('storage/'.$users->image)}}" style="border-radius: 50%;" width="50"></td>
   <td>{{$users->username}}</td>
   <td>{{$users->email}}</td>
+  <td>{{$users->password}}</td>
 
 <td>
 <button type="button" class="btn btn-warning btn-xs dt-edit">
